@@ -4,10 +4,10 @@
 <h1 class="text-center mt-5 p-5" style="color: white;">Sign In</h1>
 <form style="background-color: rgb(240, 248,255, 0.385);border-radius: 20px;" action="" class="mt-2 p-3 w-50 container text-center border">
     <div class=" ">
-        <input #acno id="u1" name="uname" class="form-control mt-2 p-2" type="text" [placeholder]="data1">
+        <input [(ngModel)]="acno" id="u1" name="uname" class="form-control mt-2 p-2" type="text" [placeholder]="data1">
     </div>
     <div class="p-2 mt-2">
-        <input #psw id="p1" name="password" class="form-control mt-2 p-2" type="password" placeholder="enter your password">
+        <input [(ngModel)]="psw" id="p1" name="password" class="form-control mt-2 p-2" type="password" placeholder="enter your password">
     </div>
-    <button (click)="login(acno,psw)" class="btn btn-danger mt-4 p-2 ">login</button>
+    <button (click)="login()" class="btn btn-danger mt-4 p-2 ">login</button>
 </form>

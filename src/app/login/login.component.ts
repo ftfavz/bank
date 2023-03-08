@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class LoginComponent {
   data="your perfect banking partner"
   data1="enter your acount number"
+  acno:any
+  psw:any
 
 
 
@@ -29,24 +31,26 @@ export class LoginComponent {
   }
   // methods
 
-  // login(){
-  //   var acnum=this.acno 
-  //   var userDetails=this.userDetails
-  //   var psw=this.pass
-  //   if(acnum in userDetails){
-  //     if(psw==userDetails[acnum]["password"]){
-  //       alert('login success')
-        
-  //     }
-  //     else{
-  //       alert("incorrect password")
-  //     }
+  login(){
+    var acnum=this.acno 
+    var psw=this.psw
+    
 
-  //   }else{
-  //     alert("incorrect acnum")
-  //   }
-  //   // alert("login worked")
-  // }
+    var userDetails=this.userDetails
+    if(acnum in userDetails){
+      if(psw==userDetails[acnum]["password"]){
+        alert('login success')
+        
+      }
+      else{
+        alert("incorrect password")
+      }
+
+    }else{
+      alert("incorrect acnum")
+    }
+    // alert("login worked")
+  }
   // acnoChange(event:any){
   //   this.acno=event.target.value
   //   // console.log(this.acno);
@@ -58,29 +62,7 @@ export class LoginComponent {
     
   // }
 
-// }
-
-
-login(acnum:any,psw:any){
-  console.log(acnum.value,psw.value);
-  
-  var acnum=acnum.value
-    var psw=psw.value
-  var userDetails=this.userDetails
-
-  if(acnum in userDetails){
-    if(psw==userDetails[acnum]["password"]){
-      alert('login success')
-      
-    }
-    else{
-      alert("incorrect password")
-    }
-
-  }else{
-    alert("incorrect acnum")
-  }
-  // alert("login worked")
 }
-}
+
+
 
